@@ -1,0 +1,14 @@
+{
+  "name": "functional_calculator",
+  "version": "0.0.1",
+  "description": "Another calculator, functional this time. Even though that sounds simple, this won't be a regular calculator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  },
+  "author": "nektarios katakis",
+  "license": "ISC"
+}

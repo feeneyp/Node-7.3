@@ -1,0 +1,14 @@
+{
+  "name": "simple_calculator",
+  "version": "0.0.1",
+  "description": "This is to create a program that acts as a basic four function calculator. If the operation is not add, subtract, multiply, or divide, it needs to throw error 'Invalid operation'",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "nektarios katakis",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
+}
