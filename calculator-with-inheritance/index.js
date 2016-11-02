@@ -1,32 +1,35 @@
-var Operation = function(){
-	//will take varible number of arguments
-	//Do something here
+var Operation = function(...nums){
+    this.nums = (nums.length !== 0 ?  nums : [0])
 }
 
 Operation.prototype.operate = function(){
 	throw new Error('Not Implemented')
 }
 
-var AddOperation = function(){
-	//this is a subclass of Operation
-	//code here
+var AddOperation = function(...nums){
+	this.operation = new Operation(...nums)
 }
 
 AddOperation.prototype.operate = function() {
-	//code here
+	return this.operation.nums.reduce((a = 0, b = 0) => a + b)
 }
 
-var SubtractOperation = function(){
-	//this is a subclass of Operation
-	//code here
+var SubtractOperation = function(...nums){
+    this.operation = new Operation(...nums)
 }
 
-var Calculator = function() { 
-	//code here
+SubtractOperation.prototype.operate = function() {
+    return this.operation.nums.reduce((a = 0, b = 0) => a - b)
 }
 
-Calculator.prototype.operate = function(){
-	//code here
+var Calculator = function(options) { 
+    this.calc = options
+}
+
+Calculator.prototype.calculate = function(...args){
+    operation = this.calc[args.slice(-1)[0]]
+	op = new operation(...args.slice(0, args.length - 1))
+    return op.operate()
 }
 
 exports.Calculator = Calculator
