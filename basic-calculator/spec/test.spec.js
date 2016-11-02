@@ -7,7 +7,7 @@ describe('basic calculator test case:::', function(){
 	})
 
 	it('subtraction', function() {
-		expect( basic_calculator(5, 2)).toEqual(3)
+		expect( basic_calculator(5, 2, 'subtract')).toEqual(3)
 	})
 
 	it('multiply', function(){
