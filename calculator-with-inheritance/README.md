@@ -31,7 +31,7 @@ The Calculator will check if it has that computation present and
 invoke the operation. Operations are initialized with the arguments to compute:
 
 ```javascript
-op = AddOperation(2, 1, 5)
+op = new AddOperation(2, 1, 5)
 ```
 
 Once you have an operation object created you should be able to invoke the operate
